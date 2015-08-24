@@ -10,7 +10,20 @@
 </div>
 
 <%= form_for(Message.new) do |f| %>
-  名前:<%= f.text_field :name %>
-  内容:<%= f.text_field :body %>
-  <%= f.submit class: "btn btn-sm btn-primary" %>
+<div class="panel panel-default">
+  <div class="panel-heading">
+    メッセージ投稿
+  </div>
+  
+  <div class="panel-body">
+    <div class="form-group">
+      <label>名前</label>
+      <%= f.text_field :name, class: "form-control"%>
+      <label>内容</label>
+      <%= f.text_area :body, class: "form-control" %>
+      <br>
+      <%= f.submit class: "btn btn-sm btn-primary" %>
+    </div>
+  </div>
+</div>
 <% end %>
